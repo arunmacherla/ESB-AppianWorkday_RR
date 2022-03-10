@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:http="http://xsd.tns.tibco.com/bw/models/sharedresource/httpclient" xmlns:id="http://www.tibco.com/ws/2013/11/identity" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmlns:sca_ext="http://www.tibco.com/ns/sca/201311" xmlns:subject="http://xsd.tns.tibco.com/bw/sharedresource/trinity/models/identity/subject" xmi:id="_uOsiMVapEemKY71n8R0EsQ" name="corp_emp_rr_appianworkdayrest.HttpClientResource_workday" type="http:HttpClientConfiguration">
+  <identitySet xmi:id="_9UzT8FbQEemKY71n8R0EsQ" appliesTo="namedResource" name="HttpClientIdentitySet" provides="confidentiality">
+    <sca_ext:intentMap xmi:id="_9UzT8VbQEemKY71n8R0EsQ" provides="sca_ext:confidentiality">
+      <sca_ext:qualifier xmi:id="_9UzT8lbQEemKY71n8R0EsQ" name="transport">
+        <id:IdentityReference xmi:id="_9Uz7AFbQEemKY71n8R0EsQ" URI="corp_emp_rr_appianworkdayrest.IdentityProvider_workday" type="subject:SubjectConfiguration"/>
+      </sca_ext:qualifier>
+    </sca_ext:intentMap>
+  </identitySet>
+  <jndi:configuration xsi:type="http:HttpClientConfiguration" xmi:id="_uOtJQFapEemKY71n8R0EsQ" httpClientVersion="httpcomponents" retryCount="3" useDefaultSSL="true">
+    <substitutionBindings xmi:id="_5khVAHU0EemMDcANU4t7mw" template="idleConnectionTimeout" propName="/connections/HTTPClient/idleConnectionTimeout"/>
+    <substitutionBindings xmi:id="_7LeEsHU0EemMDcANU4t7mw" template="maxTotalConnections" propName="/connections/HTTPClient/maxTotalConnection"/>
+    <substitutionBindings xmi:id="_8SYpcHU0EemMDcANU4t7mw" template="maxTotalConnectionsPerHost" propName="/connections/HTTPClient/maxTotalConPerHost"/>
+    <tcpDetails xmi:id="_uOtJQVapEemKY71n8R0EsQ">
+      <substitutionBindings xmi:id="_2arPMHU0EemMDcANU4t7mw" template="host" propName="/connections/HTTPClient/host"/>
+      <substitutionBindings xmi:id="_-lfUgHU0EemMDcANU4t7mw" template="soTimeout" propName="/connections/HTTPClient/socketTimeout"/>
+      <substitutionBindings xmi:id="__yAK8HU0EemMDcANU4t7mw" template="connectionTimeout" propName="/connections/HTTPClient/connectionTimeout"/>
+      <substitutionBindings xmi:id="_upw3sHbhEem82L2Npx51kA" template="port" propName="/connections/HTTPClient/port"/>
+    </tcpDetails>
+  </jndi:configuration>
+</jndi:namedResource>

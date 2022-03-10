@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<policy:Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TIBCOSecurityServerAgent="TIBCOSecurityServerAgent" xmlns:govcontrol="http://xsd.tns.tibco.com/governance/models/govcontrol" xmlns:policy="http://tns.tibco.com/bw/model/core/policy" xmlns:template_2010="http://xsd.tns.tibco.com/governance/rule/template/2010" name="corp_emp_rr_appianworkdayrest.AppianWorkdayBasicAuthentication" policyId="{http://xsd.tns.tibco.com/governance/rule/template/2010}BasicAuthentication">
+  <configuration xsi:type="govcontrol:StandaloneRule" name="corp_emp_rr_appianworkdayrest.AppianWorkdayBasicAuthentication" template="template_2010:BasicAuthentication" templateVersion="1.0.0">
+    <groups paramGroupName="AuthenticationByJAAS">
+      <paramSettings xsi:type="govcontrol:SingleParamSetting" paramName="loginModuleType" value="SharedResourceLoginModule"/>
+      <paramSettings xsi:type="govcontrol:SingleParamSetting" paramName="SecurityToken" value="HttpBasicAuthentication"/>
+      <paramSettings xsi:type="govcontrol:SingleParamSetting" paramName="Asp" value="corp_emp_rr_appianworkdayrest.BasicAuthentication_AuthenticationProvider" resourceType="TIBCOSecurityServerAgent:XmlAuthNResource"/>
+    </groups>
+  </configuration>
+</policy:Policy>

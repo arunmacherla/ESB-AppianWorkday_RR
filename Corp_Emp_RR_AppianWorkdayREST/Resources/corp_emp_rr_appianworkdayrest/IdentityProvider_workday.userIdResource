@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmlns:sp="http://xsd.tns.tibco.com/bw/sharedresource/trinity/models/securityprovider" xmlns:subject="http://xsd.tns.tibco.com/bw/sharedresource/trinity/models/identity/subject" xmi:id="_Np398XbbEem82L2Npx51kA" name="corp_emp_rr_appianworkdayrest.IdentityProvider_workday" type="subject:SubjectConfiguration">
+  <jndi:configuration xsi:type="sp:IdentitySecurityProvider" xmi:id="_Np6aMHbbEem82L2Npx51kA">
+    <configuration xsi:type="subject:SubjectConfiguration" xmi:id="_Np7BQHbbEem82L2Npx51kA">
+      <substitutionBindings xmi:id="_o8lBgJGzEemcgsOHxOdXpQ" template="username" propName="/connections/HTTPClient/authentication/username"/>
+      <substitutionBindings xmi:id="_qG2cQJGzEemcgsOHxOdXpQ" template="userpassword" propName="/connections/HTTPClient/authentication/password"/>
+    </configuration>
+  </jndi:configuration>
+</jndi:namedResource>

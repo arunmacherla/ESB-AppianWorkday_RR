@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:authxml="http://xsd.tns.tibco.com/bw/sharedresource/trinity/models/auth/xml" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_MXXZgVU3EemDicejf1qImg" name="corp_emp_rr_appianworkdayrest.BasicAuthentication_AuthenticationProvider" type="authxml:XMLConfiguration">
+  <jndi:configuration xsi:type="authxml:XMLConfiguration" xmi:id="_MXlb8FU3EemDicejf1qImg">
+    <substitutionBindings xmi:id="_9ngkcED3EeqoZ_FTaXdiPg" template="fileLocation" propName="authXMLPath"/>
+  </jndi:configuration>
+</jndi:namedResource>

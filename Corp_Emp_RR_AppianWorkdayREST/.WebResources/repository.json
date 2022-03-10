@@ -1,0 +1,25 @@
+{
+    "records": [{
+        "name": "Cloud",
+        "items": [],
+        "url": "https://integration.cloud.tibco.com:443"
+    }],
+    "resources": [
+        {
+            "location": "Service Descriptors/corp_emp_rr_appianworkdayrest.AppianWorkdayNotification-AppianWorkdayNotification.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/corp_emp_rr_appianworkdayrest.AppianWDNotification-AppianWDNotification.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/corp_emp_rr_appianworkdayrest.AppianWorkdayNotification-AppianWDNotification.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/http_healthcheck.HealthCheck-HealthCheck.json",
+            "type": "generated"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<realm xmlns="http://xsd.tns.tibco.com/trinity/realm/2013">
+  <users>
+<!-- The format of plain text password is only to be used for Test Environment. Use the alternative, supported format of 
+     hashed password type in production.-->
+    <user>
+      <name>SVC-Appian_Tibco_Dev</name>
+      <plaintext>Welcome2HHC!@#</plaintext>
+    </user>
+
+  </users>
+
+  
+</realm>

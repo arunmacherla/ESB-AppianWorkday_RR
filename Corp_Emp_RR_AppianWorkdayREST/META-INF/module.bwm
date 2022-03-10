@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:httpconnector="http://xsd.tns.tibco.com/bw/models/sharedresource/httpconnector" xmlns:property="http://ns.tibco.com/bw/property" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_2PjCIFHmEem7XsfS-cJSjg" targetNamespace="http://tns.tibco.com/bw/composite/Corp_Emp_RR_AppianWorkdayREST" name="Corp_Emp_RR_AppianWorkdayREST" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_Wjv3cMPkEemHrcfO0TmgLg" name="corp-emp-workday_appian" promote="ComponentAppianWDNotification/corp-emp-workday_appian">
+    <sca:interface.wsdl xmi:id="_Wj1-EMPkEemHrcfO0TmgLg" interface="http://xmlns.example.com/20190821022154PLT#wsdl.interface(corp-emp-workday_appian)" scaext:wsdlLocation="../Processes/corp_emp_rr_appianworkdayrest/AppianWDNotification.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_Wj-g8MPkEemHrcfO0TmgLg" name="RestService" path="/corp/emp/workday_appian/{variable}" docBasePath="http://localhost:7777/Corp_Emp_RR_AppianWorkdayREST" docResourcePath="AppianWDNotification" basePath="/" connector="corp_emp_rr_appianworkdayrest.HTTPConnectorResource_AppianWDREST" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/corp_emp_rr_appianworkdayrest.AppianWDNotification-AppianWDNotification.json" policySets="corp_emp_rr_appianworkdayrest.AppianWorkdayBasicAuthentication" scaext:policySetLocations="BWRestHttpServiceBinding">
+      <operation xmi:id="_WkCyYMPkEemHrcfO0TmgLg" operationName="post" nickname="post-corp-emp-workday_appian" httpMethod="POST" responseStyle="element" requestStyle="element">
+        <parameters xmi:id="_G2ia4MPoEemHrcfO0TmgLg">
+          <parameterMapping xmi:id="_G2ia4cPoEemHrcfO0TmgLg" parameterName="correlation-id" parameterType="Header" dataType="string"/>
+          <parameterMapping xmi:id="_IXyyQMPoEemHrcfO0TmgLg" parameterName="clientid" parameterType="Header" dataType="string"/>
+          <parameterMapping xmi:id="_JuYKsMPoEemHrcfO0TmgLg" parameterName="identifierName" parameterType="Header" dataType="string"/>
+          <parameterMapping xmi:id="_LGjekMPoEemHrcfO0TmgLg" parameterName="identifierValue" parameterType="Header" dataType="string"/>
+          <parameterMapping xmi:id="_MkW5UMPoEemHrcfO0TmgLg" parameterName="authorization" parameterType="Header" dataType="string"/>
+        </parameters>
+        <responseStatus xmi:id="_K6BJUMPmEemHrcfO0TmgLg" statusCode="200" reasonPhrase="OK" dataType="string"/>
+        <responseStatus xmi:id="_LHtnEMPmEemHrcfO0TmgLg" statusCode="400" reasonPhrase="Bad Request" dataType="string"/>
+        <responseStatus xmi:id="_MHUp8MPmEemHrcfO0TmgLg" statusCode="500" reasonPhrase="Internal Server Error" dataType="string"/>
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <operation xmi:id="_WkCyYcPkEemHrcfO0TmgLg" operationName="get" nickname="get-corp-emp-workday_appian" httpMethod="GET" responseStyle="element">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_WkdCEMPkEemHrcfO0TmgLg">
+        <parameterMapping xmi:id="_WkdpIMPkEemHrcfO0TmgLg" parameterName="variable" parameterType="Path" required="true"/>
+      </parameters>
+      <advancedConfig xmi:id="_XaR3cD2hEeqJiPuwsXlLPw" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_WkCyYsPkEemHrcfO0TmgLg" bindingName="RestService"/>
+  </sca:service>
+  <sca:service xmi:id="_-K92MJkwEeqHubHdU_ihBA" name="healthcheck-liveliness" promote="ComponentHealthCheck/healthcheck-liveliness">
+    <sca:interface.wsdl xmi:id="_-K-dQJkwEeqHubHdU_ihBA" interface="http://xmlns.example.com/20200515133750PLT#wsdl.interface(healthcheck-liveliness)" scaext:wsdlLocation="../Processes/http_healthcheck/HealthCheck.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="__7exkJkwEeqHubHdU_ihBA" name="RestService1" path="/healthcheck/liveliness" docBasePath="http://localhost:7777/Corp_Emp_RR_AppianWorkdayREST" docResourcePath="HealthCheck" connector="corp_emp_rr_appianworkdayrest.HTTPConnectorResource_AppianWDREST" structuredData="true" technologyVersion="2.0">
+      <operation xmi:id="__7hN0JkwEeqHubHdU_ihBA" operationName="get" nickname="getItem" httpMethod="GET" notes="Get an item"/>
+      <clientFormat>JSON</clientFormat>
+      <advancedConfig xmi:id="__7exkZkwEeqHubHdU_ihBA" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="__7h04JkwEeqHubHdU_ihBA" bindingName="RestService1"/>
+  </sca:service>
+  <sca:service xmi:id="_-K-dQ5kwEeqHubHdU_ihBA" name="healthcheck-readiness" promote="ComponentHealthCheck/healthcheck-readiness">
+    <sca:interface.wsdl xmi:id="_-K_EU5kwEeqHubHdU_ihBA" interface="http://xmlns.example.com/20200515133750PLT#wsdl.interface(healthcheck-readiness)" scaext:wsdlLocation="../Processes/http_healthcheck/HealthCheck.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_A-hi8JkxEeqHubHdU_ihBA" name="RestService2" path="/healthcheck/readiness" docBasePath="http://localhost:7777/Corp_Emp_RR_AppianWorkdayREST" docResourcePath="HealthCheck" connector="corp_emp_rr_appianworkdayrest.HTTPConnectorResource_AppianWDREST" structuredData="true" technologyVersion="2.0">
+      <operation xmi:id="_A-j_MJkxEeqHubHdU_ihBA" operationName="get" nickname="getItem" httpMethod="GET" notes="Get an item"/>
+      <clientFormat>JSON</clientFormat>
+      <advancedConfig xmi:id="_A-hi8ZkxEeqHubHdU_ihBA" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_A-j_MZkxEeqHubHdU_ihBA" bindingName="RestService2"/>
+  </sca:service>
+  <sca:property xmi:id="_2zKFgFHmEem7XsfS-cJSjg" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_2zTPcFHmEem7XsfS-cJSjg" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_2zTPcVHmEem7XsfS-cJSjg" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_2zTPclHmEem7XsfS-cJSjg" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_2zdAcFHmEem7XsfS-cJSjg" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_2zdAcVHmEem7XsfS-cJSjg" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_2zdAclHmEem7XsfS-cJSjg" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_2zmxcFHmEem7XsfS-cJSjg" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_2zmxcVHmEem7XsfS-cJSjg" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_x0P00D2hEeqJiPuwsXlLPw" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_vvhg8ED3EeqoZ_FTaXdiPg" name="authXMLPath" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_qmN_IHUzEemMDcANU4t7mw" name="/connections/HTTPClient/host" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_t8UYQHUzEemMDcANU4t7mw" name="/connections/HTTPClient/port" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_uShRwHUzEemMDcANU4t7mw" name="/connections/HTTPClient/maxTotalConnection" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_uSnYYHUzEemMDcANU4t7mw" name="/connections/HTTPClient/maxTotalConPerHost" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_uStfAHUzEemMDcANU4t7mw" name="/connections/HTTPClient/idleConnectionTimeout" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_uS99sHUzEemMDcANU4t7mw" name="/connections/HTTPClient/socketTimeout" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_uUhc4HUzEemMDcANU4t7mw" name="/connections/HTTPClient/connectionTimeout" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_jt9CsHbnEemuzv1MYyhXdg" name="/connections/HTTPClient/recourceURI" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_K3M7gH09EemwNfoe6QrcsA" name="/connections/HTTPClient/method" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_Pf8oQH09EemwNfoe6QrcsA" name="/connections/HTTPClient/contentType" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_jQmIQH09EemwNfoe6QrcsA" name="/connections/HTTPClient/acceptCharset" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_Bw_CoED1EeqoZ_FTaXdiPg" name="/connections/HTTPClient/retryInterval" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_B4bucED1EeqoZ_FTaXdiPg" name="/connections/HTTPClient/retryCount" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_YrTycJGzEemcgsOHxOdXpQ" name="/connections/HTTPClient/authentication/username" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_dIa28JGzEemcgsOHxOdXpQ" name="/connections/HTTPClient/authentication/password" type="property:password" scaext:simpleValue="#!SS606/2Z4hWsKP6HBM+UTg==" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_NAYZQEgGEeqqc7yW11uClA" name="/connections/HTTP/AppianWDREST/host" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_Rd7ioEgGEeqqc7yW11uClA" name="/connections/HTTP/AppianWDREST/port" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_RfpZ4EgGEeqqc7yW11uClA" name="/connections/HTTP/AppianWDREST/acceptQueueSize" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_Rjq-QEgGEeqqc7yW11uClA" name="/connections/HTTP/AppianWDREST/acceptorThreads" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_RlYOcEgGEeqqc7yW11uClA" name="/connections/HTTP/AppianWDREST/minQTPThreads" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_RokFUEgGEeqqc7yW11uClA" name="/connections/HTTP/AppianWDREST/maxQTPThreads" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_Wjn7oMPkEemHrcfO0TmgLg" name="ComponentAppianWDNotification" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_Wjn7ocPkEemHrcfO0TmgLg" processName="corp_emp_rr_appianworkdayrest.AppianWorkdayNotification"/>
+    <sca:service xmi:id="_Wjs0IMPkEemHrcfO0TmgLg" name="corp-emp-workday_appian">
+      <sca:interface.wsdl xmi:id="_WjtbMMPkEemHrcfO0TmgLg" interface="http://xmlns.example.com/20190821022154PLT#wsdl.interface(corp-emp-workday_appian)" scaext:wsdlLocation="../Processes/corp_emp_rr_appianworkdayrest/AppianWDNotification.bwp"/>
+    </sca:service>
+  </sca:component>
+  <sca:component xmi:id="_-K8BAJkwEeqHubHdU_ihBA" name="ComponentHealthCheck" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_-K8BAZkwEeqHubHdU_ihBA" processName="http_healthcheck.HealthCheck"/>
+    <sca:service xmi:id="_-K9PIJkwEeqHubHdU_ihBA" name="healthcheck-liveliness">
+      <sca:interface.wsdl xmi:id="_-K9PIZkwEeqHubHdU_ihBA" interface="http://xmlns.example.com/20200515133750PLT#wsdl.interface(healthcheck-liveliness)"/>
+    </sca:service>
+    <sca:service xmi:id="_-K-dQZkwEeqHubHdU_ihBA" name="healthcheck-readiness">
+      <sca:interface.wsdl xmi:id="_-K-dQpkwEeqHubHdU_ihBA" interface="http://xmlns.example.com/20200515133750PLT#wsdl.interface(healthcheck-readiness)"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

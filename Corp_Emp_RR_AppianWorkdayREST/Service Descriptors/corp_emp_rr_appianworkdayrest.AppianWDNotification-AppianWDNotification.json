@@ -1,0 +1,110 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "Summary about the new REST service.",
+    "description" : "Summary about the new REST service."
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/corp/emp/workday_appian/{variable}" : {
+      "post" : {
+        "summary" : "",
+        "description" : "",
+        "operationId" : "post-corp-emp-workday_appian",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/request"
+          },
+          "required" : true
+        }, {
+          "name" : "variable",
+          "in" : "path",
+          "description" : "",
+          "type" : "string",
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a response to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/response"
+            }
+          }
+        }
+      },
+      "get" : {
+        "summary" : "",
+        "description" : "",
+        "operationId" : "get-corp-emp-workday_appian",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "variable",
+          "in" : "path",
+          "description" : "",
+          "type" : "string",
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "request" : {
+      "type" : "object",
+      "properties" : {
+        "request" : {
+          "type" : "string"
+        }
+      }
+    },
+    "response" : {
+      "type" : "object",
+      "properties" : {
+        "status" : {
+          "$ref" : "#/definitions/status"
+        },
+        "responsePayload" : {
+          "$ref" : "#/definitions/responsePayload"
+        }
+      }
+    },
+    "responsePayload" : {
+      "type" : "object",
+      "properties" : {
+        "payload" : {
+          "type" : "string"
+        }
+      }
+    },
+    "status" : {
+      "type" : "object",
+      "properties" : {
+        "statusCode" : {
+          "type" : "string"
+        },
+        "statusReason" : {
+          "type" : "string"
+        },
+        "correlation-id" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

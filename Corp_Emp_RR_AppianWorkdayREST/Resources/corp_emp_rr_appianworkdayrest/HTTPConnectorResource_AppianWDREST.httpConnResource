@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:httpconnector="http://xsd.tns.tibco.com/bw/models/sharedresource/httpconnector" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_6lZO8XuREemvn4Ss4Io1Tw" name="corp_emp_rr_appianworkdayrest.HTTPConnectorResource_AppianWDREST" type="httpconnector:HttpConnectorConfiguration">
+  <jndi:configuration xsi:type="httpconnector:HttpConnectorConfiguration" xmi:id="_6lZO8nuREemvn4Ss4Io1Tw" newAccessLogs="true">
+    <substitutionBindings xmi:id="_6lZO83uREemvn4Ss4Io1Tw" template="host" propName="/connections/HTTP/AppianWDREST/host"/>
+    <substitutionBindings xmi:id="_IOUV8HxGEemzaJWg1pBIag" template="port" propName="/connections/HTTP/AppianWDREST/port"/>
+    <substitutionBindings xmi:id="_JuHUwHxGEemzaJWg1pBIag" template="acceptQueueSize" propName="/connections/HTTP/AppianWDREST/acceptQueueSize"/>
+    <substitutionBindings xmi:id="_Lj81AHxGEemzaJWg1pBIag" template="acceptors" propName="/connections/HTTP/AppianWDREST/acceptorThreads"/>
+    <substitutionBindings xmi:id="_OmYrQHxGEemzaJWg1pBIag" template="minThreads" propName="/connections/HTTP/AppianWDREST/minQTPThreads"/>
+    <substitutionBindings xmi:id="_QFu-IHxGEemzaJWg1pBIag" template="maxThreads" propName="/connections/HTTP/AppianWDREST/maxQTPThreads"/>
+  </jndi:configuration>
+</jndi:namedResource>

@@ -1,0 +1,22 @@
+{"records": [
+    {
+        "jsonSchemaLocation": "/Corp_Emp_RR_WorkdayTimeOff/Service Descriptors/corp_emp_rr_workdaytimeoff.AppianNotification-corp-emp-workdaytimeoff.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://schemas.hhc.com/corporate/employee/appianworkdaytimeoff/v1.0"
+    },
+    {
+        "jsonSchemaLocation": "/Corp_Emp_RR_AppianWorkdayREST/Service Descriptors/corp_emp_rr_appianworkdayrest.AppianWorkdayNotification-AppianWorkdayNotification.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://schemas.hhc.com/common/restCommonSchema/v1.0"
+    },
+    {
+        "jsonSchemaLocation": "/Corp_Emp_RR_AppianWorkdayREST/Service Descriptors/corp_emp_rr_appianworkdayrest.AppianWDNotification-AppianWDNotification.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://schemas.hhc.com/common/restCommonSchema/v1.0"
+    },
+    {
+        "jsonSchemaLocation": "/Corp_Emp_RR_AppianWorkdayREST/Service Descriptors/corp_emp_rr_appianworkdayrest.AppianWDNotification-AppianWDNotification.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://xmlns.example.com/AppianWDNotification/parameters"
+    }
+]}
